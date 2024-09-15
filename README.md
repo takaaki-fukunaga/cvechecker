@@ -49,7 +49,22 @@
    ```sh
    ./check-cve.sh cve-id.txt
    ```
-
+### Example
+1. Run the bash file.
+   ```sh
+   ./check-cve.sh cve-id.txt > cve-score.csv
+   ```
+1. Sort CVE-IDs with CVE score.
+   ```sh
+   sort -k 2 -t , -r cve-score.csv
+   ```
+   ```
+   CVE-2023-52760,7.8
+   CVE-2024-39487,7.1
+   CVE-2024-25741,5.5
+   CVE-2024-27397,0.0
+   (snip)
+   ```
 ## Link
 - Vulnerability APIs
   - https://nvd.nist.gov/developers/vulnerabilities
